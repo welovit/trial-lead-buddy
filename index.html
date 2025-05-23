@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lead Buddy Post Generator</title>
+  <style>
+    body { 
+      font-family: Arial, sans-serif; 
+      max-width: 600px; 
+      margin: 30px auto; 
+      -ms-overflow-style: none;   /* IE and Edge */
+      scrollbar-width: none;      /* Firefox */
+    }
+    body::-webkit-scrollbar {
+      display: none;              /* Chrome, Safari, Opera */
+    }
+    #postText { white-space: pre-line; margin: 20px 0; font-size: 1.1em; text-align: left; }
+    img { width: 100%; max-width: 350px; margin: 10px 0; }
+    button { margin: 5px 5px 5px 0; padding: 10px 15px; }
+    .label { font-weight: bold; }
+  </style>
+</head>
+
+
+
+<body>
+  <h2>Lead Buddy Post Generator</h2>
+  <button onclick="generatePost()">Generate Post</button>
+  <div id="postText"></div>
+  <img id="postImage" src="https://res.cloudinary.com/dc2r8z3h8/image/upload/Blog_Post_Image_z9aqpv" alt="Post Image" />
+  <br />
+  <button onclick="downloadText()">Download Text</button>
+  <button onclick="downloadImage()">Download Image</button>
+
+  <script>
+    const postsData = [
+      {
+        text: `🏝️ From One Budget Trip to Four Luxury Getaways (Here's My Secret)
+
+Remember when vacations meant stressing about costs and rushing back to work? Not anymore! I've discovered a way to fund multiple luxury trips a year while working less than ever.
+
+✅ Business that travels with you
+✅ No experience necessary
+✅ Full support team
+✅ Set your own income goals
+
+The best part? My business actually GROWS while I'm enjoying my vacation! 🎯
+
+🏝️ Want to know how I afford 4+ vacations yearly? Message me!`,
+        image: "https://res.cloudinary.com/dc2r8z3h8/image/upload/extra-holiday-vacations_001_arnqx6.png"
+      },
+
+      {
+        text: `👶 How I Started a Business While on Maternity Leave
+
+Returning to my 9-5 after having my baby felt impossible. Instead, I built a flexible business that grows during naptime, after bedtime, and in between playdates! No more choosing between career and kids.
+
+✅ Family-friendly business model
+✅ Start with minimal resources
+✅ Step-by-step instructions
+✅ Fully flexible schedule
+
+I've built a community of mums who are growing businesses while raising families! □
+
+👶 Want to earn without missing precious moments? Message me!`,
+        image: "https://res.cloudinary.com/dc2r8z3h8/image/upload/mumpreneurs_001_wtesx3.png"
+      },
+ {
+        text: `🏎️ How I Upgraded From a Beater to My Dream Car in 8 Months
+
+No more embarrassing breakdowns or expensive repairs! I finally bought the car I've always wanted, paying CASH instead of financing. The game-changer? A business opportunity that fits perfectly into my busy life.
+
+✅ Simple duplication model
+✅ Start with minimal resources
+✅ Detailed training system
+✅ Complete flexibility
+
+My friends keep asking how I afforded this upgrade without a raise! 🎯
+
+🏎️ Want to know how I did it? Message me for the details!`,
+        image: "https://res.cloudinary.com/dc2r8z3h8/image/upload/new-car_001_ggmt5r.png"
+      },
+
+
+    ];
+
+    let currentIndex = 0;
+
+    function generatePost() {
+      const post = postsData[currentIndex];
+      document.getElementById("postText").innerText = post.text;
+      document.getElementById("postImage").src = post.image;
+      currentIndex = (currentIndex + 1) % postsData.length;
+    }
+
+    function downloadText() {
+      const text = document.getElementById("postText").innerText;
+      const blob = new Blob([text], { type: "text/plain" });
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = "facebook-post.txt";
+      link.click();
+    }
+
+    function downloadImage() {
+      const img = document.getElementById("postImage");
+      const imageURL = img.src;
+      const fileName = imageURL.substring(imageURL.lastIndexOf("/") + 1) || "image.png";
+
+      fetch(imageURL, { mode: "cors" })
+        .then(response => {
+          if (!response.ok) throw new Error("Network response was not ok");
+          return response.blob();
+        })
+        .then(blob => {
+          const blobUrl = URL.createObjectURL(blob);
+          const link = document.createElement("a");
+          link.href = blobUrl;
+          link.download = fileName;
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          URL.revokeObjectURL(blobUrl);
+        })
+        .catch(() => alert("Failed to download image."));
+    }
+  </script>
+
+<p style="text-align:center; margin-top:30px;">
+  <a href="https://payhip.com/leadbuddy/users/login" style="color: black; text-decoration: underline;">
+    Back To Member Area
+  </a>
+</p>
+
+
+
+
+</body>
+</html>
+
+
