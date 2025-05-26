@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Lead Buddy Free Trial</title>
+  <title>Lead Buddy Free Member</title>
   <style>
     body { 
       font-family: Arial, sans-serif; 
@@ -23,8 +23,11 @@
 
 
 
+
+
+
 <body>
-  <h2>Lead Buddy Free Trial</h2>
+  <h2>Lead Buddy Free Member</h2>
   <button onclick="generatePost()">Generate Post</button>
   <div id="postText"></div>
   <img id="postImage" src="https://res.cloudinary.com/dc2r8z3h8/image/upload/Blog_Post_Image_z9aqpv" alt="Post Image" />
@@ -32,59 +35,142 @@
   <button onclick="downloadText()">Download Text</button>
   <button onclick="downloadImage()">Download Image</button>
 
+
   <script>
     const postsData = [
       {
-        text: `🏝️ From One Budget Trip to Four Luxury Getaways (Here's My Secret)
+         text: `✈️ How I Added 3 Extra Vacations This Year (Without Breaking the Bank!)
 
-Remember when vacations meant stressing about costs and rushing back to work? Not anymore! I've discovered a way to fund multiple luxury trips a year while working less than ever.
 
-✅ Business that travels with you
-✅ No experience necessary
-✅ Full support team
-✅ Set your own income goals
+Last year: One stressed-out vacation. This year: Three amazing getaways (and planning the fourth)! The difference? I discovered this flexible business opportunity that generates vacation funds while I'm literally ON vacation!
 
-The best part? My business actually GROWS while I'm enjoying my vacation! 🎯
 
-🏝️ Want to know how I afford 4+ vacations yearly? Message me!`,
-        image: "https://res.cloudinary.com/dc2r8z3h8/image/upload/extra-holiday-vacations_001_arnqx6.png"
+✅ System that anyone can follow
+✅ Affordable startup
+✅ Comprehensive training
+✅ Freedom to work when and where you want
+
+
+My secret weapon? An awesome lead generation tool that connects me with people ready for this opportunity! 🎯
+
+
+🏖️ Ready for more vacations in your life? Message me for info!`,
+        image: "https://res.cloudinary.com/dc2r8z3h8/image/upload/extra-holiday-vacations_010_uykql7.png"
       },
+
 
       {
-        text: `👶 How I Started a Business While on Maternity Leave
+        text: `👩‍👧‍👦 How I Built a Business Around Motherhood (Not The Other Way Around)
 
-Returning to my 9-5 after having my baby felt impossible. Instead, I built a flexible business that grows during naptime, after bedtime, and in between playdates! No more choosing between career and kids.
 
-✅ Family-friendly business model
-✅ Start with minimal resources
-✅ Step-by-step instructions
-✅ Fully flexible schedule
+I refused to choose between being present for my family and pursuing my entrepreneurial dreams. Thanks to this business opportunity, I don't have to! I'm building success on my terms, during my free time.
 
-I've built a community of mums who are growing businesses while raising families! □
 
-👶 Want to earn without missing precious moments? Message me!`,
-        image: "https://res.cloudinary.com/dc2r8z3h8/image/upload/mumpreneurs_001_wtesx3.png"
+✅ Proven system that works around your schedule
+✅ Low cost to begin
+✅ We'll show you exactly what to do
+✅ Flexible hours perfect for busy mums
+
+
+I've helped dozens of mothers create income without sacrificing family time! 🎯
+
+
+👩‍👧‍👦 Ready to be both present AND profitable? Message me for details!`,
+        image: "https://res.cloudinary.com/dc2r8z3h8/image/upload/mumpreneurs_010_oyalhn.png"
       },
  {
-        text: `🏎️ How I Upgraded From a Beater to My Dream Car in 8 Months
+        text: `🚗 How I Drove Off In My Dream Car (Without Taking On Debt)
 
-No more embarrassing breakdowns or expensive repairs! I finally bought the car I've always wanted, paying CASH instead of financing. The game-changer? A business opportunity that fits perfectly into my busy life.
 
-✅ Simple duplication model
-✅ Start with minimal resources
-✅ Detailed training system
-✅ Complete flexibility
+Remember that car I've been talking about for years? I finally got it—and without a crippling car loan! This business opportunity I found has completely changed my financial possibilities.
 
-My friends keep asking how I afforded this upgrade without a raise! 🎯
 
-🏎️ Want to know how I did it? Message me for the details!`,
-        image: "https://res.cloudinary.com/dc2r8z3h8/image/upload/new-car_001_ggmt5r.png"
+✅ Proven success system
+✅ Minimal investment required
+✅ Full training provided
+✅ Work from anywhere on your schedule
+
+
+The best part? I'm helping others upgrade their rides too! 🎯
+
+
+🚗 Ready to park something new in your driveway? Message me to learn how!`,
+        image: "https://res.cloudinary.com/dc2r8z3h8/image/upload/new-car_010_hxk2ef.png"
       },
+
+
+ {
+         text: `🎓 How I'm Funding My Children's Education (Without Student Loans)
+
+
+
+
+College tuition prices keep me up at night until I discovered this business model. Now I'm steadily building our education fund while avoiding the student loan trap so many families fall into.
+
+
+✅ Flexible system that grows over time
+✅ Start with minimal investment
+✅ Clear training pathway
+✅ Work around family commitments
+
+
+I'm connecting with other parents who want the same financial freedom for their children! 🎯
+
+
+🎓 Want to secure your family's educational future? Message me for information!`,
+        image: "https://res.cloudinary.com/dc2r8z3h8/image/upload/pay-school-fees_010_gx0bbz.png"
+      },
+
+
+{
+         text: `🏖️ How I'm Setting Up For Early Retirement (Without A Huge Salary)
+
+
+I used to think early retirement was only for corporate executives or lottery winners. Then I discovered this business model that's helping me build retirement funds faster than I ever thought possible!
+
+
+✅ System that grows while you sleep
+✅ Low barrier to entry
+✅ Step-by-step guidance
+✅ Build around your current job
+
+
+My inbox is filling with people wanting to know how I'll retire 10+ years early! 🎯
+
+
+🏖️ Want to escape the 40-year work plan? Message me for details!`,
+        image: "https://res.cloudinary.com/dc2r8z3h8/image/upload/retire-early_010_qoh3ip.png"
+      },
+
+
+{
+         text: `🏡 How I Replaced My Office Job (While Working From My Living Room)
+
+
+No more commutes, no more office politics—I've built a business that gives me both income AND freedom. The best part? I can work from anywhere with WiFi and choose my own hours.
+
+
+✅ Proven business model
+✅ Low startup costs
+✅ Complete training system
+✅ Set your own schedule
+
+
+I'm helping others escape the cubicle farm every single day! 🎯
+
+
+🏡 Ready to make your home your headquarters? Message me to learn how!`,
+        image: "https://res.cloudinary.com/dc2r8z3h8/image/upload/work-from-home_010_pcq9yh.png"
+      },
+
+
 
 
     ];
 
+
     let currentIndex = 0;
+
 
     function generatePost() {
       const post = postsData[currentIndex];
@@ -92,6 +178,7 @@ My friends keep asking how I afforded this upgrade without a raise! 🎯
       document.getElementById("postImage").src = post.image;
       currentIndex = (currentIndex + 1) % postsData.length;
     }
+
 
     function downloadText() {
       const text = document.getElementById("postText").innerText;
@@ -102,10 +189,12 @@ My friends keep asking how I afforded this upgrade without a raise! 🎯
       link.click();
     }
 
+
     function downloadImage() {
       const img = document.getElementById("postImage");
       const imageURL = img.src;
       const fileName = imageURL.substring(imageURL.lastIndexOf("/") + 1) || "image.png";
+
 
       fetch(imageURL, { mode: "cors" })
         .then(response => {
@@ -126,16 +215,19 @@ My friends keep asking how I afforded this upgrade without a raise! 🎯
     }
   </script>
 
+
 <p style="text-align:center; margin-top:30px;">
   <a href="https://payhip.com/leadbuddy/users/login" style="color: black; text-decoration: underline;">
-    Back To Member Area
+    Back To Members Area
   </a>
 </p>
 
 
 
 
+
+
+
+
 </body>
 </html>
-
-
